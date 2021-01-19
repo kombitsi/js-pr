@@ -1,0 +1,11 @@
+'use strict';
+let  sum1 = 10 + 10 + "10";
+console.log(sum1);
+let sum2 = 10 + "10" + 10;
+console.log(sum2);
+let sum3 = 10 + 10 + +"10";
+console.log(sum3);
+let sum4 = 10 / -"";
+console.log(sum4);
+let sum5 = 10 / +"2,5";
+console.log(sum5);

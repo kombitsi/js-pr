@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-   <script>
-    'use strict'
+'use strict'
 const product = [
     {
         id: 3,
@@ -35,15 +27,9 @@ const product = [
 ];
 
 const prodInPhoto = product.filter(item => "photos" in item && item.photos.langth > 0);
-console.log(prodInPhoto); ? // Не разобрался со стрелочной функцией, что не правильно?
+console.log(prodInPhoto);// Не разобрался со стрелочной функцией, что не правильно?
        
 const sortLowPrice = product.sort(function(item1, item2){
     return item1.price - item2.price;
-    console.log(sortLowPrice);
 });
-      
-       </script>
-
-
-</body>
-</html>
+console.log(sortLowPrice);

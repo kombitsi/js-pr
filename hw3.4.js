@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 'use strict'
+=======
+"use strict"
+>>>>>>> dev2
 const product = [
     {
         id: 3,
@@ -32,4 +36,8 @@ console.log(prodInPhoto);
 const sortLowPrice = product.sort(function(item1, item2){
     return item1.price - item2.price;
 });
+<<<<<<< HEAD
 console.log(sortLowPrice);
+=======
+console.log(sortLowPrice);
+>>>>>>> dev2

@@ -26,8 +26,8 @@ const product = [
     },
 ];
 
-const prodInPhoto = product.filter(item => "photos" in item && item.photos.lеngth > 0);
-console.log(prodInPhoto);
+const prodInPhoto = product.filter(item => "photos" in item && item.photos.langth > 0);
+console.log(prodInPhoto);// Не разобрался со стрелочной функцией, что не правильно?
        
 const sortLowPrice = product.sort(function(item1, item2){
     return item1.price - item2.price;

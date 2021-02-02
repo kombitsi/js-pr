@@ -14,4 +14,4 @@ function numberBydigits(number) {
     }
 }
 
-console.log(numberBydigits(1000));
+console.log(numberBydigits(564));

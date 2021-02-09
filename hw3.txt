@@ -1,0 +1,120 @@
+ubuntu@ip-172-31-38-25:~/hwlinux/hw5$ client_loop: send disconnect: Broken pipe
+MacBook-Pro-Dmitriy:sshkey dmitriykombitsi$ ssh -i "kombitsi.pem" ubuntu@ec2-18-220-115-93.us-east-2.compute.amazonaws.com
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Feb  3 20:45:49 UTC 2021
+
+  System load:  0.0               Processes:             104
+  Usage of /:   23.2% of 7.69GB   Users logged in:       0
+  Memory usage: 22%               IPv4 address for eth0: 172.31.38.25
+  Swap usage:   0%
+
+ * Introducing self-healing high availability clusters in MicroK8s.
+   Simple, hardened, Kubernetes for production, from RaspberryPi to DC.
+
+     https://microk8s.io/high-availability
+
+70 updates can be installed immediately.
+13 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+3 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+Last login: Wed Feb  3 16:23:42 2021 from 212.46.18.156
+ubuntu@ip-172-31-38-25:~$ ssh -i "kombitsi.pem" ubuntu@ec2-18-220-115-93.us-east-2.compute.amazonaws.com^C
+ubuntu@ip-172-31-38-25:~$ sudo useradd -p password -s /bin/bash usertest
+ubuntu@ip-172-31-38-25:~$ sed 's/:.*//' /etc/passwd
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+systemd-timesync
+messagebus
+syslog
+_apt
+tss
+uuidd
+tcpdump
+sshd
+landscape
+pollinate
+ec2-instance-connect
+systemd-coredump
+ubuntu
+lxd
+dime
+usertest
+ubuntu@ip-172-31-38-25:~$ deluser --remove-home usertest
+/usr/sbin/deluser: Only root may remove a user or group from the system.
+ubuntu@ip-172-31-38-25:~$ sudo deluser --remove-home usertest
+Looking for files to backup/remove ...
+Removing user `usertest' ...
+Warning: group `usertest' has no more members.
+Done.
+ubuntu@ip-172-31-38-25:~$ sudo useradd -ou 0 -g 0 roottestuser
+ubuntu@ip-172-31-38-25:~$ passwd roottestuser
+passwd: You may not view or modify password information for roottestuser.
+ubuntu@ip-172-31-38-25:~$ sudo passwd roottestuser
+New password:
+Retype new password:
+passwd: password updated successfully
+ubuntu@ip-172-31-38-25:~$ sed 's/:.*//' /etc/passwd
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+systemd-timesync
+messagebus
+syslog
+_apt
+tss
+uuidd
+tcpdump
+sshd
+landscape
+pollinate
+ec2-instance-connect
+systemd-coredump
+ubuntu
+lxd
+dime
+roottestuser
+ubuntu@ip-172-31-38-25:~$
